@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO Meta Tags -->
+    <title>Nguyễn Sinh Hùng | Backend Developer & Freelance Solutions</title>
+    <meta name="description" content="Portfolio of Nguyen Sinh Hung - Backend Developer & Freelance expert in Landing Pages and Automation Tools.">
+    <meta name="keywords" content="Nguyễn Sinh Hùng, Backend Developer, Landing Page Service, Automation Tool, .NET, C#">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body class="selection:bg-indigo-500/30">
+
+    <!-- Background Blobs -->
+    <div class="animated-blob w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-indigo-600 top-0 left-[-5%]"></div>
+    <div class="animated-blob w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-cyan-600 bottom-0 right-[-5%]" style="animation-delay: -7s;"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-white/0">
+        <nav class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex justify-between items-center">
+            <a href="#" class="text-xl md:text-2xl font-black tracking-tighter text-gradient">HUNG.DEV</a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#about" class="text-slate-400 hover:text-white text-[11px] uppercase font-bold tracking-widest transition-colors">
+                    <span data-lang="vi">Giới thiệu</span><span data-lang="en">About</span>
+                </a>
+                <a href="#services" class="text-slate-400 hover:text-white text-[11px] uppercase font-bold tracking-widest transition-colors">
+                    <span data-lang="vi">Dịch vụ</span><span data-lang="en">Services</span>
+                </a>
+                <a href="#experience" class="text-slate-400 hover:text-white text-[11px] uppercase font-bold tracking-widest transition-colors">
+                    <span data-lang="vi">Dự án</span><span data-lang="en">Projects</span>
+                </a>
+                
+                <div class="flex items-center bg-slate-900 rounded-full p-1 border border-white/10">
+                    <button onclick="setLanguage('vi')" id="btn-vi" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all lang-active">VN</button>
+                    <button onclick="setLanguage('en')" id="btn-en" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all text-slate-500">EN</button>
+                </div>
+
+                <a href="#contact" class="btn-primary px-5 py-2.5 rounded-full text-[11px] font-bold shadow-lg">
+                    <span data-lang="vi">Hợp tác</span><span data-lang="en">Hire Me</span>
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-open" class="md:hidden text-white p-2 focus:outline-none">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-slate-950 flex flex-col p-8 md:hidden">
+        <div class="flex justify-between items-center mb-12">
+            <span class="text-xl font-black text-gradient">HUNG.DEV</span>
+            <button id="menu-close" class="text-white"><i data-lucide="x"></i></button>
+        </div>
+        <div class="flex flex-col gap-6 text-2xl font-bold italic">
+            <a href="#services" onclick="closeMenu()"><span data-lang="vi">Dịch vụ</span><span data-lang="en">Services</span></a>
+            <a href="#experience" onclick="closeMenu()"><span data-lang="vi">Dự án</span><span data-lang="en">Projects</span></a>
+            <a href="#contact" onclick="closeMenu()"><span data-lang="vi">Liên hệ</span><span data-lang="en">Contact</span></a>
+        </div>
+        <div class="mt-auto flex justify-between items-center pt-8 border-t border-white/10">
+             <div class="flex items-center bg-slate-900 rounded-full p-1 border border-white/10">
+                <button onclick="setLanguage('vi')" class="px-4 py-2 text-xs font-bold rounded-full btn-vi-m lang-active">VN</button>
+                <button onclick="setLanguage('en')" class="px-4 py-2 text-xs font-bold rounded-full btn-en-m text-slate-500">EN</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="overflow-x-hidden">
+        <!-- Hero Section -->
+        <section class="relative pt-32 md:pt-48 pb-20 px-4 md:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="w-full md:flex-1 space-y-6 md:space-y-8 text-center md:text-left" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] md:text-xs font-bold uppercase tracking-widest mx-auto md:mx-0">
+                    <span data-lang="vi">Sẵn sàng cho các dự án mới</span>
+                    <span data-lang="en">Available for new projects</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-8xl font-black leading-tight tracking-tight">
+                    <span data-lang="vi">Giải pháp</span><span data-lang="en">Software</span> <br/>
+                    <span class="text-gradient underline decoration-indigo-500/20 italic">
+                        <span data-lang="vi">Phần mềm</span><span data-lang="en">Solutions</span>
+                    </span>
+                </h1>
+                
+                <p class="text-slate-400 text-sm md:text-xl max-w-2xl leading-relaxed mx-auto md:mx-0 px-4 md:px-0">
+                    <span data-lang="vi">Tôi là <b>Nguyễn Sinh Hùng</b>. Chuyên gia phát triển Backend .NET Core và cung cấp giải pháp tối ưu cho doanh nghiệp.</span>
+                    <span data-lang="en">I'm <b>Nguyen Sinh Hung</b>. A Backend Developer specializing in .NET Core and business optimization solutions.</span>
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="#contact" class="w-full sm:w-auto btn-primary px-8 py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 group transition-all">
+                        <span data-lang="vi">Bắt đầu ngay</span><span data-lang="en">Start project</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#experience" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 font-bold text-base hover:bg-white/10 transition-all text-center">
+                        <span data-lang="vi">Xem dự án</span><span data-lang="en">View Works</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative w-full max-w-[280px] md:max-w-sm mx-auto" data-aos="zoom-in" data-aos-delay="200">
+                <div class="aspect-[4/5] rounded-[2.5rem] md:rounded-[3.5rem] bg-gradient-to-tr from-indigo-600 to-cyan-500 p-1 shadow-2xl rotate-2">
+                    <div class="w-full h-full bg-slate-950 rounded-[calc(2.5rem-4px)] md:rounded-[calc(3.5rem-4px)] flex items-center justify-center relative overflow-hidden group">
+                        <i data-lucide="cpu" class="absolute w-32 md:w-40 h-32 md:h-40 text-indigo-500/5 group-hover:scale-125 transition-transform duration-1000"></i>
+                        <span class="text-7xl md:text-9xl z-10 filter drop-shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700">👨‍💻</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="py-20 md:py-32 px-4 md:px-8 bg-slate-900/20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
+                    <h2 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.3em] mb-4">
+                        <span data-lang="vi">Dịch vụ</span><span data-lang="en">Services</span>
+                    </h2>
+                    <h3 class="text-3xl md:text-5xl font-black italic">
+                        <span data-lang="vi">Tôi có thể giúp gì cho bạn?</span><span data-lang="en">How can I help?</span>
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="glass-panel p-8 md:p-10 rounded-[2rem] md:rounded-[3rem]" data-aos="fade-up">
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-6 md:mb-8"><i data-lucide="layout"></i></div>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4 italic">Landing Page</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            <span data-lang="vi">Thiết kế trang đích chuyên nghiệp, tối ưu UI/UX giúp tăng tỷ lệ chuyển đổi khách hàng tiềm năng.</span>
+                            <span data-lang="en">Professional landing page design focused on conversion and premium UI/UX.</span>
+                        </p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="glass-panel p-8 md:p-10 rounded-[2rem] md:rounded-[3rem]" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 mb-6 md:mb-8"><i data-lucide="zap"></i></div>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4 italic">Automation Tools</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            <span data-lang="vi">Tự động hóa quy trình nhập liệu, quét dữ liệu (Crawl), OCR giúp tiết kiệm thời gian vận hành.</span>
+                            <span data-lang="en">Custom automation tools for data entry, web crawling, and OCR systems.</span>
+                        </p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="glass-panel p-8 md:p-10 rounded-[2rem] md:rounded-[3rem]" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-6 md:mb-8"><i data-lucide="server"></i></div>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4 italic">Backend System</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            <span data-lang="vi">Phát triển API bảo mật, quản lý cơ sở dữ liệu và hệ thống quản trị chuyên sâu bằng .NET Core.</span>
+                            <span data-lang="en">Scalable backend development, secure APIs, and database architecture using .NET.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="experience" class="py-20 md:py-32 px-4 md:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-12 md:mb-16" data-aos="fade-right">
+                    <h2 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.3em] mb-4 text-center md:text-left">
+                        <span data-lang="vi">Lịch sử làm việc</span><span data-lang="en">Experience</span>
+                    </h2>
+                    <h3 class="text-3xl md:text-4xl font-black italic text-center md:text-left">
+                        <span data-lang="vi">Kinh nghiệm & Dự án</span><span data-lang="en">Work History</span>
+                    </h3>
+                </div>
+
+                <div class="space-y-16 md:space-y-24">
+                    <!-- Hikari -->
+                    <div class="relative grid md:grid-cols-12 gap-6 md:gap-8" data-aos="fade-up">
+                        <div class="md:col-span-3">
+                            <div class="md:sticky md:top-32 text-center md:text-left mb-4 md:mb-0">
+                                <h4 class="text-xl md:text-2xl font-black text-white mb-1">HIKARI BPO</h4>
+                                <p class="text-indigo-400 font-mono text-xs md:text-sm font-bold">12/2023 - Hiện tại</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-9 space-y-8">
+                            <div class="project-card">
+                                <h5 class="text-lg md:text-xl font-bold text-white mb-2">Data Entry Management System</h5>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    <span data-lang="vi">Tăng 40% hiệu suất nhập liệu thông qua ứng dụng WinForms tích hợp DevExpress và tối ưu SQL Server.</span>
+                                    <span data-lang="en">Increased data entry efficiency by 40% using specialized WinForms solutions.</span>
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold">C#</span>
+                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold">SQL SERVER</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- VNPT -->
+                    <div class="relative grid md:grid-cols-12 gap-6 md:gap-8 border-t border-white/5 pt-12 md:border-none md:pt-0" data-aos="fade-up">
+                        <div class="md:col-span-3">
+                            <div class="md:sticky md:top-32 text-center md:text-left mb-4 md:mb-0">
+                                <h4 class="text-xl md:text-2xl font-black text-white mb-1">VNPT IT3</h4>
+                                <p class="text-emerald-400 font-mono text-xs md:text-sm font-bold">06/2022 - 08/2022</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-9 space-y-8">
+                            <div class="project-card">
+                                <h5 class="text-lg md:text-xl font-bold text-white mb-2">Smart Tourism Gate</h5>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                    <span data-lang="vi">Phát triển hệ thống API lõi cho cổng thông tin du lịch bằng .NET Core Web API.</span>
+                                    <span data-lang="en">Developed core REST APIs for provincial tourism portal using .NET Core.</span>
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold">.NET CORE</span>
+                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold">WEB API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 md:px-8">
+            <div class="max-w-6xl mx-auto glass-panel rounded-[2rem] md:rounded-[4rem] p-8 md:p-16 relative overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-4xl md:text-6xl font-black mb-6 md:mb-8 italic tracking-tighter">
+                            <span data-lang="vi">Bắt đầu ngay?</span><span data-lang="en">Let's talk!</span>
+                        </h2>
+                        <p class="text-slate-400 text-sm md:text-lg mb-8 md:mb-12">
+                            <span data-lang="vi">Tôi luôn sẵn sàng thảo luận về dự án của bạn hoặc các cơ hội hợp tác mới.</span>
+                            <span data-lang="en">Open to discussions about new projects or professional collaborations.</span>
+                        </p>
+                        <div class="space-y-3">
+                            <div class="text-lg md:text-xl font-bold text-white">hungns0210@gmail.com</div>
+                            <div class="text-lg md:text-xl font-bold text-indigo-400">0367 123 568</div>
+                        </div>
+                    </div>
+                    <form class="space-y-4">
+                        <input type="text" class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-5 py-4 focus:border-indigo-500 outline-none transition-all" placeholder="Tên của bạn / Name">
+                        <input type="email" class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-5 py-4 focus:border-indigo-500 outline-none transition-all" placeholder="Email">
+                        <textarea rows="4" class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-5 py-4 focus:border-indigo-500 outline-none transition-all" placeholder="Lời nhắn / Message"></textarea>
+                        <button type="button" class="w-full btn-primary py-4 rounded-xl font-black text-base uppercase tracking-widest">
+                            <span data-lang="vi">Gửi yêu cầu</span><span data-lang="en">Send Inquiry</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 text-center px-4">
+        <p class="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em]">
+            © 2024 Nguyen Sinh Hung • <span data-lang="vi">Bản quyền đã được bảo lưu</span><span data-lang="en">All Rights Reserved</span>
+        </p>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
