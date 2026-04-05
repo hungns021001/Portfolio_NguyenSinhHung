@@ -23,7 +23,7 @@
     <!-- Header -->
     <header class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-white/0">
         <nav class="max-w-7xl mx-auto px-4 md:px-8 h-20 flex justify-between items-center">
-            <a href="#" class="text-xl md:text-2xl font-black tracking-tighter text-gradient">HUNG.DEV</a>
+            <a href="#" class="text-xl md:text-2xl font-black tracking-tighter text-gradient">HUNGNS DEV</a>
             
             <!-- Desktop Nav -->
             <div class="hidden md:flex gap-8 items-center">
@@ -57,7 +57,7 @@
     <!-- Mobile Menu Sidebar -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-slate-950 flex flex-col p-8 md:hidden">
         <div class="flex justify-between items-center mb-12">
-            <span class="text-xl font-black text-gradient">HUNG.DEV</span>
+            <span class="text-xl font-black text-gradient">HUNGNS DEV</span>
             <button id="menu-close" class="text-white"><i data-lucide="x"></i></button>
         </div>
         <div class="flex flex-col gap-6 text-2xl font-bold italic">
@@ -106,10 +106,27 @@
             </div>
 
             <div class="relative w-full max-w-[280px] md:max-w-sm mx-auto" data-aos="zoom-in" data-aos-delay="200">
+                <!-- Lớp viền Gradient bên ngoài -->
                 <div class="aspect-[4/5] rounded-[2.5rem] md:rounded-[3.5rem] bg-gradient-to-tr from-indigo-600 to-cyan-500 p-1 shadow-2xl rotate-2">
+                    
+                    <!-- Thân khung chứa ảnh -->
                     <div class="w-full h-full bg-slate-950 rounded-[calc(2.5rem-4px)] md:rounded-[calc(3.5rem-4px)] flex items-center justify-center relative overflow-hidden group">
-                        <i data-lucide="cpu" class="absolute w-32 md:w-40 h-32 md:h-40 text-indigo-500/5 group-hover:scale-125 transition-transform duration-1000"></i>
-                        <span class="text-7xl md:text-9xl z-10 filter drop-shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700">👨‍💻</span>
+                        
+                        <!-- Icon CPU ẩn dưới nền -->
+                        <i data-lucide="cpu" class="absolute w-32 md:w-40 h-32 md:h-40 text-indigo-500/10 group-hover:scale-125 transition-transform duration-1000"></i>
+                        
+                        <!-- THAY THẾ TẠI ĐÂY: Thẻ img thay cho span emoji -->
+                        <!-- Bạn hãy thay "URL_ANH_CUA_BAN" bằng link ảnh của bạn hoặc đường dẫn file local -->
+                        <img 
+                            src="./style/image/hung.png" 
+                            alt="Nguyen Sinh Hung Profile"
+                            class="w-full h-full object-cover z-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        />
+
+                        <!-- Fallback: Nếu ảnh lỗi thì hiện lại Emoji để không bị trống -->
+                        <span class="hidden text-7xl md:text-9xl z-10 filter drop-shadow-2xl">👨‍💻</span>
+                        
                     </div>
                 </div>
             </div>
@@ -164,7 +181,7 @@
             <div class="max-w-6xl mx-auto">
                 <div class="mb-12 md:mb-16" data-aos="fade-right">
                     <h2 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.3em] mb-4 text-center md:text-left">
-                        <span data-lang="vi">Lịch sử làm việc</span><span data-lang="en">Experience</span>
+                        <span data-lang="vi">Kinh nghiệm làm việc</span><span data-lang="en">Experience</span>
                     </h2>
                     <h3 class="text-3xl md:text-4xl font-black italic text-center md:text-left">
                         <span data-lang="vi">Kinh nghiệm & Dự án</span><span data-lang="en">Work History</span>
@@ -172,7 +189,7 @@
                 </div>
 
                 <div class="space-y-16 md:space-y-24">
-                    <!-- Hikari -->
+                    <!-- Công ty: Hikari BPO -->
                     <div class="relative grid md:grid-cols-12 gap-6 md:gap-8" data-aos="fade-up">
                         <div class="md:col-span-3">
                             <div class="md:sticky md:top-32 text-center md:text-left mb-4 md:mb-0">
@@ -180,42 +197,61 @@
                                 <p class="text-indigo-400 font-mono text-xs md:text-sm font-bold">12/2023 - Hiện tại</p>
                             </div>
                         </div>
-                        <div class="md:col-span-9 space-y-8">
-                            <div class="project-card">
-                                <h5 class="text-lg md:text-xl font-bold text-white mb-2">Data Entry Management System</h5>
-                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                                    <span data-lang="vi">Tăng 40% hiệu suất nhập liệu thông qua ứng dụng WinForms tích hợp DevExpress và tối ưu SQL Server.</span>
-                                    <span data-lang="en">Increased data entry efficiency by 40% using specialized WinForms solutions.</span>
-                                </p>
+                        <div class="md:col-span-9 space-y-10">
+                            <!-- Dự án 1 -->
+                            <div class="project-card group">
+                                <h5 class="text-lg md:text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">Data Entry Management System</h5>
+                                
+                                <!-- Phần nội dung tách dòng -->
+                                <ul class="space-y-2 text-slate-400 text-sm leading-relaxed mb-5 list-none">
+                                    <li class="flex items-start">
+                                        <span class="text-indigo-500 mr-2">▹</span>
+                                        <span data-lang="vi">Tăng 40% hiệu suất nhập liệu thông qua ứng dụng WinForms và DevExpress.</span>
+                                        <span data-lang="en">Improved data entry efficiency by 40% using WinForms and DevExpress.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-indigo-500 mr-2">▹</span>
+                                        <span data-lang="vi">Tối ưu hơn 20 Stored Procedures, giảm 30% thời gian truy vấn SQL.</span>
+                                        <span data-lang="en">Optimized 20+ SQL stored procedures, reducing execution time by 30%.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-indigo-500 mr-2">▹</span>
+                                        <span data-lang="vi">Tích hợp logic kiểm tra dữ liệu, giảm thiểu sai sót trong quá trình nhập liệu.</span>
+                                        <span data-lang="en">Implemented validation logic to reduce errors and improve data accuracy.</span>
+                                    </li>
+                                </ul>
+
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold">C#</span>
-                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold">SQL SERVER</span>
+                                    <span class="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 rounded text-[10px] text-indigo-300 font-bold uppercase tracking-wider">C#</span>
+                                    <span class="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 rounded text-[10px] text-indigo-300 font-bold uppercase tracking-wider">WinForms</span>
+                                    <span class="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/20 rounded text-[10px] text-indigo-300 font-bold uppercase tracking-wider">SQL Server</span>
+                                </div>
+                            </div>
+
+                            <!-- Dự án 2 (Bạn có thể thêm tương tự) -->
+                            <div class="project-card group pt-8 border-t border-white/5">
+                                <h5 class="text-lg md:text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">OCR Image to Text System</h5>
+                                <ul class="space-y-2 text-slate-400 text-sm leading-relaxed mb-5 list-none">
+                                    <li class="flex items-start">
+                                        <span class="text-indigo-500 mr-2">▹</span>
+                                        <span data-lang="vi">Xây dựng hệ thống OCR trích xuất dữ liệu từ hình ảnh tự động.</span>
+                                        <span data-lang="en">Built an OCR system to extract text from images for automation.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-indigo-500 mr-2">▹</span>
+                                        <span data-lang="vi">Tích hợp Tesseract và kỹ thuật xử lý ảnh để tăng độ chính xác.</span>
+                                        <span data-lang="en">Integrated Tesseract and image processing to improve recognition.</span>
+                                    </li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold uppercase">Python</span>
+                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold uppercase">OCR</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- VNPT -->
-                    <div class="relative grid md:grid-cols-12 gap-6 md:gap-8 border-t border-white/5 pt-12 md:border-none md:pt-0" data-aos="fade-up">
-                        <div class="md:col-span-3">
-                            <div class="md:sticky md:top-32 text-center md:text-left mb-4 md:mb-0">
-                                <h4 class="text-xl md:text-2xl font-black text-white mb-1">VNPT IT3</h4>
-                                <p class="text-emerald-400 font-mono text-xs md:text-sm font-bold">06/2022 - 08/2022</p>
-                            </div>
-                        </div>
-                        <div class="md:col-span-9 space-y-8">
-                            <div class="project-card">
-                                <h5 class="text-lg md:text-xl font-bold text-white mb-2">Smart Tourism Gate</h5>
-                                <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                                    <span data-lang="vi">Phát triển hệ thống API lõi cho cổng thông tin du lịch bằng .NET Core Web API.</span>
-                                    <span data-lang="en">Developed core REST APIs for provincial tourism portal using .NET Core.</span>
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold">.NET CORE</span>
-                                    <span class="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-[10px] text-slate-400 font-bold">WEB API</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- Công ty khác tương tự bên dưới... -->
                 </div>
             </div>
         </section>
