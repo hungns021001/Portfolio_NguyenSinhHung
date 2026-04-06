@@ -78,3 +78,55 @@
                 closeMenu();
             }
         });
+
+
+  // EmailJS Configuration
+        (function() {
+            emailjs.init("9fKdtkLmCbRQe5Ppt");
+        })();
+
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const feedback = document.getElementById('formFeedback');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // UI Update: Loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i data-lucide="loader-2" class="animate-spin w-5 h-5"></i> <span class="animate-pulse">ĐANG GỬI / SENDING...</span>`;
+            lucide.createIcons();
+
+            // EmailJS Service & Template IDs
+            emailjs.sendForm('service_aeh47ka', 'template_7udrzrc', this)
+                .then(function() {
+                    // Success - Bilingual response
+                    feedback.className = "text-xs text-center p-4 rounded-xl font-medium mt-4 bg-emerald-500/10 text-emerald-400 block";
+                    feedback.innerHTML = `
+                        <div class="font-bold">✅ GỬI THÀNH CÔNG / SENT SUCCESSFULLY!</div>
+                        <div class="opacity-80">Tôi sẽ phản hồi bạn sớm nhất. / I will reply to you soon.</div>
+                    `;
+                    
+                    submitBtn.innerText = "ĐÃ GỬI / SENT ✓";
+                    contactForm.reset();
+                }, function(error) {
+                    console.error('EmailJS Error:', error);
+                    // Error - Bilingual response
+                    feedback.className = "text-xs text-center p-4 rounded-xl font-medium mt-4 bg-red-500/10 text-red-400 block";
+                    feedback.innerHTML = `
+                        <div class="font-bold">❌ LỖI GỬI TIN / SENDING FAILED</div>
+                        <div class="opacity-80">Please try again.</div>
+                    `;
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "THỬ LẠI / RETRY";
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        feedback.classList.add('hidden');
+                        if(!submitBtn.disabled || submitBtn.innerText.includes("SENT")) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerText = "GỬI YÊU CẦU / SEND REQUEST";
+                        }
+                    }, 6000);
+                });
+        });

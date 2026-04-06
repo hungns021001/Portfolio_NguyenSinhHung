@@ -41,6 +41,53 @@
             filter: brightness(1.1);
         }
 
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:disabled { opacity: 0.9; cursor: not-allowed; }
+
+        .submit-btn-wrapper { min-height: 60px; }
+        #submitBtn { 
+            height: 60px;
+            display: grid;
+            place-items: center;
+        }
+        .btn-content {
+            grid-area: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-loading {
+            grid-area: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            opacity: 0;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .is-loading .btn-content {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .is-loading .btn-loading {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
         .lang-active {
             background: rgba(99, 102, 241, 0.2);
             color: #818cf8;
